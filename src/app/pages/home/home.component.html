@@ -1,0 +1,14 @@
+<p>home works!</p>
+<button (click)="logout()">
+    Logout
+</button>
+
+<input type="text" name="user" id="user" [(ngModel)]="busca" />
+<button (click)="buscaInstagram()" >Buscar</button>
+
+<div *ngFor="let img of imagens" >
+    <img  [src]="img.node.display_url" />
+    <p>
+        {{img.node.accessibility_caption}}
+    </p>    
+</div>

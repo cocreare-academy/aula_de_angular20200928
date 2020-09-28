@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './pages/login/login.component'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'exemplo-create';
+  title = 'Titulo da página';
+  outro = LoginComponent
+  
+
 }

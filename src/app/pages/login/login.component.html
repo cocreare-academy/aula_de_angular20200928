@@ -1,0 +1,7 @@
+<p>login works!</p>
+
+<form>
+    <input  type="text" name="user" id="user" [(ngModel)]="user.user" placeholder="Usuario..." />
+    <input   ype="text" name="password" [(ngModel)]="user.password" id="password" placeholder="Senha..." />
+</form>
+<button (click)="login()">Enviar</button>
