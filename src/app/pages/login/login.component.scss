@@ -1,0 +1,29 @@
+.error-message {
+    background-color: #ff8888;
+    border-radius: 15px;
+    color: #333;
+    border: 1px solid #333;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.fade-in {
+    display: block;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

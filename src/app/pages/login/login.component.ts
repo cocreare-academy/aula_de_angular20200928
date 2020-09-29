@@ -14,6 +14,8 @@ export class LoginComponent implements OnInit {
     user: "",
     password: ""
   }
+
+  errorMessage=""
   constructor(private router: Router, private userService: UserService) { 
     console.log('contructor iniciado')
   }
@@ -29,7 +31,14 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log(this.user)
-    this.userService.login(this.user)
+    if (!this.user.user) {
+      this.errorMessage = "Por favor digite um usuário válido"
+    } else  if (!this.user.password) {
+      this.errorMessage = "Por favor digite uma senha válid"
+    } else  {
+      this.userService.login(this.user)
+    }
+    
   }
 
   ngOnDestroy() {

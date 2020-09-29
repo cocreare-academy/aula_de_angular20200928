@@ -1,5 +1,9 @@
 <p>login works!</p>
 
+<div class="error-message" [ngClass]="{'fade-in':errorMessage}">
+    {{errorMessage}}
+</div>
+
 <form>
     <input  type="text" name="user" id="user" [(ngModel)]="user.user" placeholder="Usuario..." />
     <input   ype="text" name="password" [(ngModel)]="user.password" id="password" placeholder="Senha..." />

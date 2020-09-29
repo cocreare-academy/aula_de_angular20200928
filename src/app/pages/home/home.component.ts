@@ -18,6 +18,11 @@ export class HomeComponent implements OnInit {
   
   busca = ''
   estilobotao = "background:blue"
+  today = Date();
+
+  showToday() {
+    console.log(this.today)
+  }
 
   imagens:any = [];
   private resultado: User[];

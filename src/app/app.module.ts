@@ -10,6 +10,7 @@ import { BotaoComponent } from './components/botao/botao.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { ExemploPipe } from './pipes/exemplo.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
     BotaoComponent,
     HomeComponent,
     NotfoundComponent,
-    ProfileComponent
+    ProfileComponent,
+    ExemploPipe
   ],
   imports: [
     BrowserModule,
