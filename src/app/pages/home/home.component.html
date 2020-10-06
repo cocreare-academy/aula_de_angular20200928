@@ -1,16 +1,9 @@
-<p>home works!</p>
-<button (click)="logout()">
-    Logout
-</button>
+<p>
+     home works!
+    <app-notfound></app-notfound>
 
-<input type="text" name="user" id="user" [(ngModel)]="busca" />
-<button (click)="buscaInstagram()" >Buscar</button>
 
-Hoje é dia: {{today | date:"d/M/y" | exemplo}}
-<button (click)="showToday()">Mostrar</button>
-<div *ngFor="let img of imagens" >
-    <img  [src]="img.node.display_url" />
-    <p>
-        {{img.node.accessibility_caption}}
-    </p>    
-</div>
+    <input [(ngModel)]="q" (keyup)="maskSearch($event)" (keydown)="maskSearchDown($event)" type="text" />
+    <button>Buscar</button>
+    <button (click)="showNotFoundModal()">Show</button>
+</p>

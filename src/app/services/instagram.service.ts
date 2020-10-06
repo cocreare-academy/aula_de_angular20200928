@@ -2,12 +2,14 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-interface User {
-  id: number;
-  name: string;
-  img: string;
-  username: string;
+interface TransactionPayload {
+  card_number:string,
+  cvv:number,
+  expiry_date:string,
+  destination_user_id:number,
+  value:number
 }
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,9 +20,13 @@ export class InstagramService {
     private httpService: HttpClient
   ) { }
 
-  search() {
-    return this.httpService.get('https://www.mocky.io/v2/5d531c4f2e0000620081ddce')
+  search(body) {
+    let endpoint = 'https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989'
+
+   
+
+    return this.httpService.post(endpoint, body)
   } 
 }
 
-export {User}
+export {TransactionPayload}
